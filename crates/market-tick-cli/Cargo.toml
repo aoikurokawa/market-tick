@@ -1,0 +1,35 @@
+[package]
+name = "market-tick-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Command line client for the Market Tick program"
+
+[[bin]]
+name = "market-tick"
+path = "src/main.rs"
+
+[dependencies]
+# The program crate is pulled in without its entrypoint so that instruction
+# encoding and the program ID always match the deployed artifact.
+market-tick = { workspace = true, features = ["no-entrypoint"] }
+market-tick-abi = { workspace = true }
+
+anchor-lang = { workspace = true }
+clap = { version = "4", features = ["derive", "env"] }
+serde_json = "1"
+solana-commitment-config = "3"
+solana-instruction = "3"
+solana-keypair = "3"
+solana-pubkey = "3"
+solana-rpc-client = "3"
+solana-rpc-client-api = "3"
+solana-signature = "3"
+solana-signer = "3"
+solana-system-interface = { version = "2", features = ["bincode"] }
+solana-transaction = "3"
+solana-transaction-error = "3"
+
+[lints]
+workspace = true
