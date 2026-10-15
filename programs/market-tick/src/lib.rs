@@ -8,9 +8,9 @@ use account::MarketTickV1Account;
 use anchor_lang::prelude::*;
 use market_tick_abi::{PDA_SEED_MARKET_TICK, PDA_SEED_VERSION_V1};
 
-declare_id!("tickUcsEQegChaAuo9VYQQztB4ZGApY6ZT4FkULWY6N");
+declare_id!("tickfdrWPwEXGYWUFSr7Rnkrpc3hs1vXSdc8G1fPjGS");
 
-const PDA_V1: Pubkey = pubkey!("4cG31VNF9TzFinNc7BmnjhFvGjxkY3sCETVMtMgbrhPs");
+const PDA_V1: Pubkey = pubkey!("7kEt6N3wNJmiTH65he6eUGndJhsX3kDY1WbEedmwZGVw");
 
 #[program]
 pub mod market_tick {
